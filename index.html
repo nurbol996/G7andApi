@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приложение погоды</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <h1>Приложение погоды</h1>
+
+    <div class="input-container">
+        <label>Выберите способ пойка:</label>
+        <div class="radio-container">
+            <input type="radio" id="cityNameRadio" name="inputMethod" value="name" checked>
+            <label for="cityNameRadio">По названию города</label>
+            <input type="radio" id="cityIdRadio" name="inputMethod" value="id">
+            <label for="cityIdRadio">По ID города</label>
+        </div>
+    </div>
+
+    <div class="input-container">
+        <label>Город:</label>
+        <input type="text" id="cityInput" />
+    </div>
+
+    <div class="btn-container">
+        <button onclick="getWeather()">Узнать погоду</button>
+    </div>
+
+    <div class="result-container">
+        <h2>Результат:</h2>
+        <table>
+            <tr>
+                <td>Температура:</td>
+                <td><span id="temperature"></span> °C</td>
+            </tr>
+            <tr>
+                <td>Скорость ветра:</td>
+                <td><span id="windSpeed"></span> м/с</td>
+            </tr>
+            <tr>
+                <td>Влажность:</td>
+                <td><span id="humidity"></span> %</td>
+            </tr>
+        </table>
+    </div>
+
+    <img id="weatherIcon" src="https://ped-kopilka.ru/upload/blogs/15744_c3d62911c871f045fc7215d46dd4fec6.jpg.jpg" alt="Погодный значок">
+
+    <script src="src/script.js"></script>
+</body>
+</html>
